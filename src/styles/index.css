@@ -1,11 +1,84 @@
-/* 
-
-    You can write your own styles here...
-    
-    
-    ...Or you can use the import command to include 
-    other sylesheets into your bunde as well, e.j:
-    
-    import 'relative/path/to/stylesheet.scss';
-
-*/
+/* Contenedor principal para centrar todo */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start; /* Cambiamos a flex-start para que el contenido empiece desde arriba */
+    height: 100vh; /* Ocupa toda la altura de la pantalla */
+    background-color: #f0f0f0; /* Fondo claro para mejor contraste */
+    padding-top: 0; /* Eliminamos el padding superior */
+  }
+  
+  /* Tubo negro en la parte superior */
+  .traffic-light-tube {
+    width: 30px;
+    height: 100px;
+    background-color: black;
+    border-radius: 10px 10px 0 0;
+    margin-top: 0; /* Aseguramos que esté pegado a la parte superior */
+  }
+  
+  /* Estilos del semáforo */
+  .traffic-light {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 20px;
+    background-color: black;
+    border-radius: 0 0 10px 10px;
+    width: 100px;
+  }
+  
+  /* Estilos base de las luces */
+  .light {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: gray;
+    cursor: pointer;
+    transition: box-shadow 0.3s ease; /* Transición suave para la sombra */
+  }
+  
+  /* Sombra para cada luz activa */
+  .light.red.active {
+    background-color: red;
+    box-shadow: 0 0 20px 10px rgba(255, 0, 0, 0.7); /* Sombra roja */
+  }
+  
+  .light.yellow.active {
+    background-color: yellow;
+    box-shadow: 0 0 20px 10px rgba(255, 255, 0, 0.7); /* Sombra amarilla */
+  }
+  
+  .light.green.active {
+    background-color: green;
+    box-shadow: 0 0 20px 10px rgba(0, 255, 0, 0.7); /* Sombra verde */
+  }
+  
+  .light.purple.active {
+    background-color: purple;
+    box-shadow: 0 0 20px 10px rgba(128, 0, 128, 0.7); /* Sombra púrpura */
+  }
+  
+  /* Estilos de los botones */
+  .buttons {
+    margin-top: 20px;
+    display: flex;
+    gap: 10px;
+  }
+  
+  button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: white;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
