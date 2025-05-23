@@ -33,7 +33,7 @@ const TrafficLight = () => {
     setExtraColor(false);
     setColor("red"); // Reinicia el semáforo a rojo al quitar la luz púrpura
   };
-
+  console.log({ color });
   return (
     <div className="container">
       {/* Tubo negro en la parte superior */}
@@ -68,6 +68,10 @@ const TrafficLight = () => {
           <button onClick={removePurpleLight}>Remove Purple Light</button>
         )}
       </div>
+
+      <div className="rojo">rojo</div>
+      <div className="amarillo">amarillo</div>
+      <div className="verde">verde</div>
     </div>
   );
 };
