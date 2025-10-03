@@ -6,7 +6,7 @@ const Home = () => {
   const [info1, setInfo1] = useState(false);
 
   return (
-    <div className="text-center">
+    <div className="text-center holita">
       <button
         onClick={() => {
           if (info1 === false) {
