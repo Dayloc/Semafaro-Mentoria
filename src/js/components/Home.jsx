@@ -4,7 +4,6 @@ import AxiosExample from "./AxiosExample";
 
 const Home = () => {
   const [info1, setInfo1] = useState(false);
-  console.log(info1);
 
   return (
     <div className="text-center">
